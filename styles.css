@@ -1,0 +1,308 @@
+
+        /* Your existing CSS styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: rgb(252, 249, 249);
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        .container {
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .header:hover {
+            color: #4CAF50;
+        }
+
+        .input-title-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .input-title-container input {
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ffffff3a;
+            font-size: 16px;
+            width: 80%;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .input-title-container input:focus {
+            background-color: #f9fcf9;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+        }
+
+        .select-category-button {
+            padding: 12px 20px;
+            background-color: #486348;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .select-category-button:hover {
+            background-color: #b7cab8;
+        }
+
+        .category-options {
+            display: none;
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-options button {
+            display: block;
+            padding: 10px;
+            width: 100%;
+            background-color: #f1f1f1;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            margin: 5px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .category-options button:hover {
+            background-color: #ddd;
+        }
+
+        .category-section {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .plus-button {
+            width: 50px;
+            height: 50px;
+            padding: 0;
+            background-color: #b3c5b5;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .plus-button:hover {
+            background-color: #85b687;
+        }
+
+        .inputs-container {
+            margin-top: 20px;
+        }
+
+        .input-group {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .input-group input {
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            margin-right: 10px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .input-group input:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+        }
+
+        .input-group button {
+            padding: 8px 12px;
+            background-color: rgb(237, 233, 233);
+            color: rgb(187, 185, 185);
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .input-group button:hover {
+            background-color: darkred;
+        }
+
+        .number-input {
+            width: 35px;
+        }
+
+        .word-input {
+            width: 250px;
+        }
+
+        .generate-interface {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button, .download-button {
+            padding: 12px 20px;
+            background-color: #486348;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .back-button:hover, .download-button:hover {
+            background-color: #45a049;
+        }
+
+        .rectangle-box {
+            width: 80%;
+            height: 200px;
+            border: 2px solid #ccc;
+            margin: 20px auto;
+        }
+        /* BAckground gradient */
+        .home-container {
+            text-align: center;
+            background: linear-gradient(to right, #154628, #0a4c4c);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* Create New File Button Design */
+        .home-container .create-file-button {
+            padding: 6px 10px;
+            background-color: white;
+            border-color: #f4f7f4;
+            color: rgb(31, 129, 85);
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .home-container .create-file-button:hover {
+            background-color: #071a0f;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* File Created */
+        .home-container .created-file {
+            margin-top: 15px;
+            cursor: pointer;
+            font-size: 25px;
+            font-weight: bold;
+            color: #141614;
+            background-color: #f8f3f3;
+            display: flex;
+            padding: 15px;
+            border-radius: 30px;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeIn 0.5s ease-in-out forwards;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .home-container .created-file:hover {
+            color: #ffffff;
+            background-color: #1c2f1d;
+            transform: scale(1.1);
+        }
+
+        /* Smooth fade-in animation for created files */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Smooth removal animation */
+        .created-file.removing {
+            animation: fadeOut 0.4s ease-in-out forwards;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+                transform: scale(1);
+            }
+            to {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+        }
+
+        /* Container of the files */
+        #createdFilesList {
+            background-color: white;
+            margin-top: 35px;
+            padding: 25px;
+            transition: box-shadow 0.3s ease-in-out;
+            border-top-right-radius: 50px;
+        }
+
+        /* AI button styling */
+        .ai-button {
+            padding: 8px 12px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .ai-button:hover {
+            background-color: #007B8A;
+        }
