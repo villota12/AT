@@ -8,9 +8,7 @@
         /* Your existing CSS styles */
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #071a0f, #172525);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-color: rgb(252, 249, 249);
             margin: 0;
             padding: 0;
             color: white;
@@ -215,30 +213,95 @@
 
         .home-container {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 10px;
+            background: linear-gradient(to right, #154628, #0a4c4c);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            border-radius: 10px;
+            padding: 5px;
         }
 
+        /* Create New File Button Design */
         .home-container .create-file-button {
-            padding: 12px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
+            padding: 6px 10px;
+            background-color: white;
+            border-color: #f4f7f4;
+            color: rgb(31, 129, 85);
             cursor: pointer;
-            font-size: 16px;
-            margin-top: 20px;
+            font-size: 10px;
             border-radius: 5px;
+            transition: all 0.3s ease-in-out;
         }
 
+        .home-container .create-file-button:hover {
+            background-color: #071a0f;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* File Created */
         .home-container .created-file {
-            margin-top: 30px;
+            margin-top: 5px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 12px;
             font-weight: bold;
-            color: #d7e9d8;
+            color: #141614;
+            border: 2px solid #f8f3f3;
+            display: flex;
+            padding: 5px;
+            border-radius: 15px;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeIn 0.5s ease-in-out forwards;
+            transition: all 0.3s ease-in-out;
         }
 
         .home-container .created-file:hover {
-            color: #4CAF50;
+            color: #ffffff;
+            background-color: #1c2f1d;
+            transform: scale(1.1);
+        }
+
+        /* Smooth fade-in animation for created files */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Smooth removal animation */
+        .created-file.removing {
+            animation: fadeOut 0.4s ease-in-out forwards;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+                transform: scale(1);
+            }
+            to {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+        }
+
+        /* Container of the files */
+        #createdFilesList {
+            background-color: white;
+            margin: 10px;
+            padding: 5px;
+            border-radius: 15px;
+            box-shadow: 1px 1px 5px 3px #0e160e;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        #createdFilesList:hover {
+            box-shadow: 2px 2px 10px 5px #0e160e;
         }
 
         /* AI button styling */
@@ -263,10 +326,11 @@
     <div id="homePage" class="home-container">
         <div class="header" style="font-size: 40px;
         font-family: 'Courier New', Courier, monospace;
-        color: #f8f3f3;">AccounThink</div>
+        color: #ffffff;">AccounThink</div>
         <button class="create-file-button" onclick="createNewFile()">+ Create New File</button>
 
         <!-- Files List (initially empty) -->
+        
         <div id="createdFilesList"></div>
     </div>
 

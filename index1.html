@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart of Accounts Toggle</title>
+    <style>
+        .chart-container {
+            padding: 20px;
+            border: 2px solid black;
+            width: 300px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="toggleBtn">Hide Chart of Accounts</button>
+
+    <div id="chartOfAccounts" class="chart-container">
+        <ul>
+            <li>Cash</li>
+            <li>Accounts Receivable</li>
+            <li>Inventory</li>
+            <li>Fixed Assets</li>
+            <li>Accounts Payable</li>
+            <li>Revenue</li>
+            <li>Expenses</li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById("toggleBtn").addEventListener("click", function() {
+            let chart = document.getElementById("chartOfAccounts");
+            if (chart.style.display === "none") {
+                chart.style.display = "block";
+                this.textContent = "Hide Chart of Accounts";
+            } else {
+                chart.style.display = "none";
+                this.textContent = "Show Chart of Accounts";
+            }
+        });
+    </script>
+
+</body>
+</html>
