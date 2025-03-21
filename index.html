@@ -216,8 +216,6 @@
             background: linear-gradient(to right, #154628, #0a4c4c);
             background-repeat: no-repeat;
             background-attachment: fixed;
-            border-radius: 10px;
-            padding: 20px;
         }
 
         /* Create New File Button Design */
@@ -294,8 +292,10 @@
             background-color: white;
             margin-top: 30px;
             padding: 15px;
-            border-radius: 15px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
             transition: box-shadow 0.3s ease-in-out;
+
         }
 
         #createdFilesList:hover {
@@ -324,7 +324,7 @@
     <div id="homePage" class="home-container">
         <div class="header" style="font-size: 40px;
         font-family: 'Courier New', Courier, monospace;
-        color: #ffffff;">AccounThink</div>
+        color: #ffffff; margin-bottom: 50px;">AccounThink</div>
         <button class="create-file-button" onclick="createNewFile()">+ Create New File</button>
 
         <!-- Files List (initially empty) -->
