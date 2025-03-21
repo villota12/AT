@@ -17,7 +17,6 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             border-bottom-right-radius: 30px;
-            border-bottom-left-radius: 30px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
@@ -193,6 +192,11 @@
             display: none;
             text-align: center;
             margin-top: 20px;
+            background: linear-gradient(to right, #154628, #0a4c4c);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding: 20px;
+            border-bottom-right-radius: 30px;
         }
 
         .back-button, .download-button {
