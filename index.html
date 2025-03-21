@@ -11,65 +11,69 @@
         <div class="header" style="font-size: 50px;
         font-family: 'Courier New', Courier, monospace;
         color: #ffffff; margin-bottom: 50px;">AccounThink</div>
+
+        <p style="font-size: 10px; padding-bottom: 5px;">Smart accounting made simple<br>AI-powered precision at your fingertips!</p>
         <button class="create-file-button" onclick="createNewFile()">+ Create New File</button>
 
         <!-- Files List (initially empty) -->
-        
+
         <div id="createdFilesList"></div>
     </div>
 
     <div id="mainInterface" class="container" style="display:none;">
         <!-- Title Input for Chart of Account -->
-        <div class="input-title-container">
-            <input type="text" id="titleInput" placeholder="Add title">
-        </div>
-        
-        <!-- New text input for instructions -->
-        <div class="input-title-container">
-            <input type="text" id="instructionsInput" placeholder="Enter instructions for the title">
-        </div>
+            <div class="input-title-container">
+                <input type="text" id="titleInput" placeholder="Add title">
+            </div>
+            
+            <!-- New text input for instructions -->
+            <div class="input-title-container">
+                <input type="text" id="instructionsInput" placeholder="Enter instructions for the title">
+            </div>
+        <div class="separation">
+            <!-- Chart of Account Section with Category Selection -->
+            <div class="header" onclick="toggleChartOfAccount()">Chart of Account</div>
+            
+            <!-- Category Selection for Chart of Account -->
+            <button class="select-category-button" id="selectCategoryButton" onclick="toggleCategoryOptions()">Select Category</button>
+            
+            <div class="category-options" id="categoryOptions">
+                <button onclick="selectCategory('asset')">Asset</button>
+                <button onclick="selectCategory('liabilities')">Liabilities</button>
+                <button onclick="selectCategory('expenses')">Expenses</button>
+                <button onclick="selectCategory('equity')">Equity</button>
+                <button onclick="selectCategory('revenue')">Revenue</button>
+            </div>
 
-        <!-- Chart of Account Section with Category Selection -->
-        <div class="header" onclick="toggleChartOfAccount()">Chart of Account</div>
-        
-        <!-- Category Selection for Chart of Account -->
-        <button class="select-category-button" id="selectCategoryButton" onclick="toggleCategoryOptions()">Select Category</button>
-        
-        <div class="category-options" id="categoryOptions">
-            <button onclick="selectCategory('asset')">Asset</button>
-            <button onclick="selectCategory('liabilities')">Liabilities</button>
-            <button onclick="selectCategory('expenses')">Expenses</button>
-            <button onclick="selectCategory('equity')">Equity</button>
-            <button onclick="selectCategory('revenue')">Revenue</button>
-        </div>
-
-        <!-- Category Sections (Chart of Account) -->
-        <div class="category-section" id="assetSection">
-            <button class="plus-button" onclick="addInput('asset')">+</button>
-            <div class="inputs-container" id="assetInputs"></div>
-        </div>
-        <div class="category-section" id="liabilitiesSection">
-            <button class="plus-button" onclick="addInput('liabilities')">+</button>
-            <div class="inputs-container" id="liabilitiesInputs"></div>
-        </div>
-        <div class="category-section" id="expensesSection">
-            <button class="plus-button" onclick="addInput('expenses')">+</button>
-            <div class="inputs-container" id="expensesInputs"></div>
-        </div>
-        <div class="category-section" id="equitySection">
-            <button class="plus-button" onclick="addInput('equity')">+</button>
-            <div class="inputs-container" id="equityInputs"></div>
-        </div>
-        <div class="category-section" id="revenueSection">
-            <button class="plus-button" onclick="addInput('revenue')">+</button>
-            <div class="inputs-container" id="revenueInputs"></div>
+            <!-- Category Sections (Chart of Account) -->
+            <div class="category-section" id="assetSection">
+                <button class="plus-button" onclick="addInput('asset')">+</button>
+                <div class="inputs-container" id="assetInputs"></div>
+            </div>
+            <div class="category-section" id="liabilitiesSection">
+                <button class="plus-button" onclick="addInput('liabilities')">+</button>
+                <div class="inputs-container" id="liabilitiesInputs"></div>
+            </div>
+            <div class="category-section" id="expensesSection">
+                <button class="plus-button" onclick="addInput('expenses')">+</button>
+                <div class="inputs-container" id="expensesInputs"></div>
+            </div>
+            <div class="category-section" id="equitySection">
+                <button class="plus-button" onclick="addInput('equity')">+</button>
+                <div class="inputs-container" id="equityInputs"></div>
+            </div>
+            <div class="category-section" id="revenueSection">
+                <button class="plus-button" onclick="addInput('revenue')">+</button>
+                <div class="inputs-container" id="revenueInputs"></div>
+            </div>
         </div>
 
         <!-- Transaction Section (without category selection) -->
-        <div class="header">Transaction</div>
-        <button class="plus-button" onclick="addTransactionInput()">+</button>
-        <div class="inputs-container" id="transactionInputs"></div>
-
+        <div class="separation">
+            <div class="header">Transaction</div>
+            <button class="plus-button" onclick="addTransactionInput()">+</button>
+            <div class="inputs-container" id="transactionInputs"></div>
+        </div>
         <!-- Generate Button -->
         <button class="select-category-button" onclick="generateNewInterface()">Generate</button>
     </div>

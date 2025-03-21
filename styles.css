@@ -7,13 +7,16 @@
             padding: 0;
             color: white;
         }
-
+        
+        /* background-second interface */
         .container {
             padding: 30px;
             max-width: 900px;
             margin: auto;
-            background-color: #ffffff;
-            border-radius: 10px;
+            background: linear-gradient(to right, #154628, #0a4c4c);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            border-radius: 30px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
@@ -23,8 +26,15 @@
             cursor: pointer;
             margin-bottom: 20px;
             text-align: center;
-            color: #333;
+            color: #ffffff;
             transition: color 0.3s ease;
+        }
+
+        .separation{
+            background-color: rgba(152, 127, 127, 0.115);
+            border-radius: 15px;
+            padding: 10px;
+            margin-bottom: 10px;
         }
 
         .header:hover {
@@ -52,19 +62,20 @@
 
         .select-category-button {
             padding: 12px 20px;
-            background-color: #486348;
+            background-color: #293a29;
             color: white;
             border: none;
             cursor: pointer;
             font-size: 16px;
             width: 100%;
             margin-bottom: 15px;
-            border-radius: 5px;
+            border-radius: 10px;
             transition: background-color 0.3s ease;
+            box-shadow: 1px 1px 2px ;
         }
 
         .select-category-button:hover {
-            background-color: #b7cab8;
+            background-color: #165d4e;
         }
 
         .category-options {
@@ -210,6 +221,7 @@
             background: linear-gradient(to right, #154628, #0a4c4c);
             background-repeat: no-repeat;
             background-attachment: fixed;
+            padding-top: 20px;
         }
 
         /* Create New File Button Design */
@@ -236,7 +248,7 @@
             cursor: pointer;
             font-size: 25px;
             font-weight: bold;
-            color: #141614;
+            color: #114541;
             background-color: #f8f3f3;
             display: flex;
             padding: 15px;
