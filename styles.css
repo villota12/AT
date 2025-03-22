@@ -54,7 +54,7 @@
         }
 
         .input-title-container input {
-            padding: 8px;
+            padding: 10px;
             border-radius: 30px;
             border: 1px solid #ffffff3a;
             font-size: 14px;
@@ -146,10 +146,6 @@
         .inputs-container {
             margin-top: 10px;
             width: 100;
-            height: auto;
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: center;
         }
 
         .input-group {
