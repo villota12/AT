@@ -32,6 +32,7 @@
 
         .separation{
             background-color: rgba(152, 127, 127, 0.115);
+            /* background-color: white; */
             border-radius: 15px;
             padding: 10px;
             margin-bottom: 20px;
@@ -214,6 +215,7 @@
             text-align: center;
             margin-top: 20px;
             background: linear-gradient(to right, #154628, #0a4c4c);
+            color: white;
             background-repeat: no-repeat;
             background-attachment: fixed;
             padding: 20px;
