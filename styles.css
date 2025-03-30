@@ -7,7 +7,7 @@
             padding: 0;
             color: white;
         }
-        
+
         /* background-second interface */
         .container {
             padding: 30px;
@@ -99,7 +99,7 @@
             width: 90%;
             box-shadow: 2px 2px 15px 2px black;
         }
-
+       
         /* Option design */
         .category-options button {
             display: block;
@@ -256,7 +256,7 @@
         }
 
         /* Create New File Button Design */
-        .home-container .create-file-button {
+        .home-container .create-file-button, #play{
             padding: 6px 10px;
             background-color: white;
             border-color: #f4f7f4;
@@ -267,7 +267,7 @@
             transition: all 0.3s ease-in-out;
         }
 
-        .home-container .create-file-button:hover {
+        .home-container .create-file-button:hover, #play:hover{
             background-color: #071a0f;
             color: white;
             transform: scale(1.05);
