@@ -36,7 +36,14 @@
             </div>
 
             <p style="font-size: 14px; color:rgb(57, 109, 57); margin-top: 40px;"><span style="font-weight: 900; font-size: 20px;">How to Use?</span><br><br>1. Enter Chart of Account Number or Transaction(Day).<br>2. Enter Name of the Chart of Account or The Transaction Description.<br>3. Click Generate to see the results.<br>4. Click AI to see explanation for the answer<br>5. Click x if you want to delete the text input field</p>
-        <div class="separation">
+
+            <button class="but" id="camera-toggle" onclick="toggleCamera()">[ ]</button>
+            <button class="but" id="switch-button" onclick="switchCamera()">Switch Camera</button>
+            <button class="but" id="capture-button" onclick="capturePhoto()">Capture Photo</button>
+            <video id="camera-video" autoplay playsinline></video>
+            <canvas id="photo-canvas"></canvas>
+            
+            <div class="separation">
             <!-- Chart of Account Section with Category Selection -->
             <div class="header" onclick="toggleChartOfAccount()">Chart of Account</div>
 
@@ -338,6 +345,68 @@
             transactionInputsContainer.appendChild(inputGroup);
         }
         
+        let videoStream;
+        let useFrontCamera = false;
+        let cameraOpen = false;
+
+        function toggleCamera() {
+            if (cameraOpen) {
+                stopCamera();
+            } else {
+                startCamera();
+            }
+        }
+
+        function startCamera() {
+            if (videoStream) {
+                videoStream.getTracks().forEach(track => track.stop());
+            }
+            
+            const video = document.getElementById('camera-video');
+            const switchButton = document.getElementById('switch-button');
+            const captureButton = document.getElementById('capture-button');
+            const cameraToggle = document.getElementById('camera-toggle');
+
+            navigator.mediaDevices.getUserMedia({ video: { facingMode: useFrontCamera ? 'user' : 'environment' } })
+                .then(stream => {
+                    videoStream = stream;
+                    video.srcObject = stream;
+                    video.style.display = 'block';
+                    switchButton.style.display = 'inline-block';
+                    captureButton.style.display = 'inline-block';
+                    cameraToggle.textContent = 'Close Camera';
+                    cameraOpen = true;
+                })
+                .catch(err => {
+                    alert('Camera access denied or unavailable.');
+                });
+        }
+
+        function stopCamera() {
+            if (videoStream) {
+                videoStream.getTracks().forEach(track => track.stop());
+            }
+            document.getElementById('camera-video').style.display = 'none';
+            document.getElementById('switch-button').style.display = 'none';
+            document.getElementById('capture-button').style.display = 'none';
+            document.getElementById('camera-toggle').textContent = '[ ]';
+            cameraOpen = false;
+        }
+
+        function switchCamera() {
+            useFrontCamera = !useFrontCamera;
+            startCamera();
+        }
+
+        function capturePhoto() {
+            const video = document.getElementById('camera-video');
+            const canvas = document.getElementById('photo-canvas');
+            const context = canvas.getContext('2d');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            alert('Photo captured! (Nothing else happens)');
+        }
     </script>
 </body>
 </html>
